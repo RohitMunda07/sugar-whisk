@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sugar & Whisk — small-batch cakes, pastries, cookies and baked gifts." />
+  <title>Sugar & Whisk | Little moments, freshly baked</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">A little sweetness goes a long way <span>•</span> Freshly baked every morning</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Sugar and Whisk home">
+      <span class="brand-mark"><i data-lucide="cake-slice"></i></span>
+      <span><b>sugar <em>&</em> whisk</b><small>BAKERY & PATISSERIE</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#story">Our story</a><a href="#reviews">Kind words</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Search products"><i data-lucide="search"></i></button>
+      <button class="bag-button" id="openCart" aria-label="Open shopping bag"><i data-lucide="shopping-bag"></i><span>Bag</span><b id="bagCount">0</b></button>
+      <button class="menu-toggle icon-button" id="menuToggle" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Featured bakery collection">
+      <div class="hero-track" id="heroTrack">
+        <article class="hero-slide active" style="--hero-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=2000&q=85')">
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-line"></span> MADE FOR YOUR MOMENTS</span>
+            <h1>Every celebration<br>deserves <em>a little cake.</em></h1>
+            <p>From candle-lit birthdays to just-because Tuesdays, make the ordinary feel wonderful.</p>
+            <a class="button button-light" href="#shop">Find your favourite <i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="slide-note"><span>01</span><span class="note-line"></span><span>Celebration cakes</span></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=2000&q=85')">
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-line"></span> A FLAKY LITTLE FAVOURITE</span>
+            <h1>Slow mornings.<br><em>Golden pastries.</em></h1>
+            <p>Buttery layers, delicate fillings and the kind of first bite that makes you pause.</p>
+            <a class="button button-light" href="#shop">Explore pastries <i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="slide-note"><span>02</span><span class="note-line"></span><span>Morning pastries</span></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=2000&q=85')">
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-line"></span> LITTLE TREATS, BIG JOY</span>
+            <h1>One for now.<br><em>One for later.</em></h1>
+            <p>Crinkly cookies, soft centres and a few crumbs worth absolutely no regrets.</p>
+            <a class="button button-light" href="#shop">Shop the cookie jar <i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="slide-note"><span>03</span><span class="note-line"></span><span>Cookies & treats</span></div>
+        </article>
+      </div>
+      <div class="hero-controls">
+        <div class="hero-dots" id="heroDots" aria-label="Choose featured slide">
+          <button class="hero-dot active" aria-label="Show slide 1"></button><button class="hero-dot" aria-label="Show slide 2"></button><button class="hero-dot" aria-label="Show slide 3"></button>
+        </div>
+        <div class="hero-arrows"><button id="prevSlide" aria-label="Previous slide"><i data-lucide="arrow-left"></i></button><button id="nextSlide" aria-label="Next slide"><i data-lucide="arrow-right"></i></button></div>
+        <span class="auto-note"><span class="pulse"></span> FRESHLY MADE, ALWAYS</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Bakery promises"><div class="ticker-inner"><span>SMALL BATCH, BIG LOVE</span><i data-lucide="asterisk"></i><span>BAKED FRESH DAILY</span><i data-lucide="asterisk"></i><span>GOOD THINGS TAKE BUTTER</span><i data-lucide="asterisk"></i><span>MADE TO BE SHARED</span><i data-lucide="asterisk"></i><span>SMALL BATCH, BIG LOVE</span></div></section>
+
+    <section class="section categories" id="collections">
+      <div class="section-heading">
+        <div><span class="eyebrow dark-eyebrow">A MENU FULL OF HAPPY</span><h2>What are you <em>craving?</em></h2></div>
+        <p>Handmade in small batches, with the good ingredients and a generous pinch of care.</p>
+      </div>
+      <div class="category-grid">
+        <a href="#shop" class="category-card" data-category-link="Cakes"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Layered celebration cake"><span class="category-number">01 / 04</span><div><h3>Celebration cakes</h3><span>Make it memorable <i data-lucide="arrow-up-right"></i></span></div></a>
+        <a href="#shop" class="category-card" data-category-link="Pastries"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Fresh flaky pastries"><span class="category-number">02 / 04</span><div><h3>Pastries</h3><span>Layers of lovely <i data-lucide="arrow-up-right"></i></span></div></a>
+        <a href="#shop" class="category-card" data-category-link="Cookies"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="Freshly baked cookies"><span class="category-number">03 / 04</span><div><h3>Cookies</h3><span>Little bites of joy <i data-lucide="arrow-up-right"></i></span></div></a>
+        <a href="#shop" class="category-card" data-category-link="Brownies"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Chocolate brownies"><span class="category-number">04 / 04</span><div><h3>Brownies & bars</h3><span>Rich, fudgy, lovely <i data-lucide="arrow-up-right"></i></span></div></a>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section shop-inner">
+        <div class="section-heading shop-heading"><div><span class="eyebrow dark-eyebrow">THE GOOD STUFF</span><h2>Fresh from <em>our oven.</em></h2></div><a href="#shop" class="text-link" id="resetFilters">View all treats <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="shop-toolbar">
+          <div class="filter-pills" id="categoryFilters"><button class="filter-pill active" data-category="All">All treats <span>08</span></button><button class="filter-pill" data-category="Cakes">Cakes</button><button class="filter-pill" data-category="Pastries">Pastries</button><button class="filter-pill" data-category="Cookies">Cookies</button><button class="filter-pill" data-category="Brownies">Brownies</button></div>
+          <label class="price-filter"><i data-lucide="sliders-horizontal"></i><select id="priceFilter" aria-label="Filter by price"><option value="all">All prices</option><option value="500">Under ₹500</option><option value="1000">Under ₹1,000</option><option value="1000plus">₹1,000 & above</option></select></label>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85" alt="Baker preparing fresh pastry"></div>
+      <div class="story-copy"><span class="eyebrow dark-eyebrow">A LITTLE ABOUT US</span><h2>Good baking is<br>our <em>love language.</em></h2><p>We believe the best things are made slowly: dough given time to rise, fruit picked at its sweetest, and a cake finished by hand. Our tiny bakery brings together familiar flavours, thoughtful ingredients and a little everyday magic.</p><a class="button button-dark" href="#reviews">Get to know us <i data-lucide="arrow-up-right"></i></a><div class="signature">With love, always <span>— The Sugar & Whisk team</span></div></div>
+    </section>
+
+    <section class="reviews-area" id="reviews">
+      <div class="quote-section"><span class="eyebrow">NOT JUST OUR MUMS SAY SO</span><div class="quote-mark">“</div><blockquote id="quoteText">The lemon tart disappeared before we’d even finished dinner. That says everything.</blockquote><div class="quote-author"><img id="reviewAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Customer profile"><div><b id="reviewName">Ananya S.</b><span id="reviewMeta">A very happy regular</span></div></div><div class="review-controls"><button id="reviewPrev" aria-label="Previous review"><i data-lucide="arrow-left"></i></button><span><b id="reviewIndex">01</b> / <span id="reviewTotal">03</span></span><button id="reviewNext" aria-label="Next review"><i data-lucide="arrow-right"></i></button></div></div>
+      <div class="write-review section"><div class="write-review-heading"><span class="eyebrow dark-eyebrow">YOUR TURN TO SHARE</span><h2>Had a little <em>something sweet?</em></h2><p>Tell us what you tried and how you liked it.</p></div><form id="reviewForm" class="review-form"><label>Your name<input id="reviewerName" type="text" maxlength="50" placeholder="e.g. Priya S." required></label><label>Your rating<select id="reviewerRating" required><option value="5">★★★★★ — Loved it</option><option value="4">★★★★☆ — Really good</option><option value="3">★★★☆☆ — It was nice</option><option value="2">★★☆☆☆ — Could be better</option><option value="1">★☆☆☆☆ — Not for me</option></select></label><label class="review-message-label">Your review<textarea id="reviewerText" rows="4" maxlength="500" placeholder="What did you order? What did you think?" required></textarea></label><button class="button button-dark" type="submit">Submit review <i data-lucide="arrow-up-right"></i></button><small id="reviewFormMessage">Reviews are saved in this browser for this demo.</small></form><div class="customer-reviews" id="customerReviews" aria-live="polite"></div></div>
+    </section>
+    <section class="newsletter-section"><div><span class="eyebrow dark-eyebrow">A SWEET NOTE FROM US</span><h2>Fresh news. <em>Fresh bakes.</em></h2><p>Sign up for seasonal specials, first dibs and the occasional cookie-related announcement.</p></div><form id="newsletterForm" class="newsletter-form"><label for="newsletterEmail" class="sr-only">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button class="button button-dark" type="submit">Count me in <i data-lucide="arrow-up-right"></i></button><small id="newsletterMessage">No spam. Just the sweet stuff.</small></form></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><div class="footer-brand"><a class="brand brand-footer" href="#home"><span class="brand-mark"><i data-lucide="cake-slice"></i></span><span><b>sugar <em>&</em> whisk</b><small>BAKERY & PATISSERIE</small></span></a><p>Little moments, freshly baked.<br>Made with care in Ranchi.</p><div class="socials"><a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/></svg></a><a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.6 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6H17V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.5v3.2h2.8V21z"/></svg></a><a href="mailto:hello@sugarandwhisk.example" aria-label="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div><h4>EXPLORE</h4><a href="#shop">Shop all treats</a><a href="#collections">Collections</a><a href="#story">Our story</a><a href="#reviews">Kind words</a></div><div><h4>COME BY</h4><p>12 Market Lane, Ranchi</p><p>Mon–Sat: 8 AM – 7 PM</p><p>Sunday: 9 AM – 2 PM</p></div><div><h4>SAY HELLO</h4><a href="tel:+910000000000">+91 00000 00000</a><a href="mailto:hello@sugarandwhisk.example">hello@sugarandwhisk.example</a><p>Custom orders welcome</p></div></div>
+    <div class="footer-bottom"><span>© 2026 Sugar & Whisk. Demo concept.</span><span>Made with care, baked with patience.</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow dark-eyebrow">YOUR LITTLE HAUL</span><h3>Your bag <span id="drawerCount">(0)</span></h3></div><button class="icon-button" id="closeCart" aria-label="Close bag"><i data-lucide="x"></i></button></div><div class="cart-items" id="cartItems"><div class="empty-cart"><i data-lucide="shopping-bag"></i><h4>Nothing in your bag yet</h4><p>Let's fix that with something lovely.</p><button class="button button-dark" id="continueShopping">Explore treats</button></div></div><div class="coupon-area">
+      <label for="couponCode">Have a coupon?</label>
+      <form id="couponForm"><input id="couponCode" type="text" placeholder="Enter code" autocomplete="off"><button type="submit">Apply</button></form>
+      <p id="couponMessage" aria-live="polite">Use SWEET20 for 20% off your first order.</p>
+    </div>
+    <div class="cart-bottom"><div><span>Subtotal</span><b id="cartSubtotal">₹0</b></div><p>Delivery and taxes are calculated at checkout.</p><button class="button button-dark full-button" id="checkoutButton">Continue to checkout <i data-lucide="arrow-up-right"></i></button><small>Demo checkout — no payment will be taken.</small></div></aside>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><button class="icon-button mobile-close" id="closeMenu" aria-label="Close menu"><i data-lucide="x"></i></button><div class="mobile-nav-brand">sugar <em>&</em> whisk<small>BAKERY & PATISSERIE</small></div><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#story">Our story</a><a href="#reviews">Kind words & reviews</a><div class="nav-policy-links"><span>HELP & POLICIES</span><button data-policy="terms">Terms & conditions</button><button data-policy="privacy">Privacy policy</button><button data-policy="refund">Refund policy</button><button data-policy="cod">Cash on delivery</button></div><button class="logout-button" id="logoutButton"><i data-lucide="log-out"></i> Log out</button></nav>
+  <section class="search-panel" id="searchPanel" aria-label="Search products" aria-hidden="true"><div class="search-panel-head"><div><span class="eyebrow dark-eyebrow">FIND YOUR FAVOURITE</span><h3>Search the bakery</h3></div><button class="icon-button" id="closeSearch" aria-label="Close search"><i data-lucide="x"></i></button></div><form id="searchForm" class="search-form"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="Try cake, cookies, croissant..." autocomplete="off"><button type="submit" class="button button-dark">Search</button></form><p class="search-hint" id="searchHint">Search by product name or category.</p></section>
+  <div class="policy-modal" id="policyModal" role="dialog" aria-modal="true" aria-hidden="true"><div class="policy-card"><button class="icon-button policy-close" id="closePolicy" aria-label="Close policy"><i data-lucide="x"></i></button><span class="eyebrow dark-eyebrow">SUGAR & WHISK</span><h3 id="policyTitle">Policy</h3><div id="policyBody"></div><small>Demo policy text — review and customise it for the real business before publishing.</small></div></div>
+  <div class="coupon-popup-backdrop" id="couponPopup" aria-hidden="true">
+    <section class="coupon-popup" role="dialog" aria-modal="true" aria-labelledby="couponPopupTitle">
+      <button class="coupon-popup-close" id="closeCouponPopup" aria-label="Close offer"><i data-lucide="x"></i></button>
+      <div class="coupon-popup-art"><span>A LITTLE TREAT</span><strong>20<small>% OFF</small></strong><i data-lucide="gift"></i></div>
+      <div class="coupon-popup-copy"><span class="eyebrow dark-eyebrow">A FIRST-ORDER SURPRISE</span>
+        <h2 id="couponPopupTitle">A little sweetness,<br><em>on us.</em></h2>
+        <p>Get 20% off your first order. Use this little code at checkout.</p>
+        <div class="coupon-code-row"><code id="popupCouponCode">SWEET20</code><button id="copyCouponCode" type="button">Copy code</button></div>
+        <button class="button button-dark" id="claimCoupon">Shop with 20% off <i data-lucide="arrow-up-right"></i></button>
+        <small>One-time demo offer. This pop-up won't keep interrupting you.</small>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
